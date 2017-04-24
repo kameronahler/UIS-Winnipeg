@@ -1,0 +1,118 @@
+
+// header
+.zone-header-wrapper{
+	background: $color-1;
+}
+
+
+// home headings
+.node-type-bpi-intro .field-collection-view h2.block-title{
+	background:$color-1;
+	color:#fff;
+}
+
+.jcarousel-header h2{
+	padding-top:10px;
+}
+
+
+// main nav
+#block-system-main-menu ul li a{
+	color:#fff;
+	transition:.2s ease-out;
+
+	&:hover{
+		color:#fff !important
+	}
+}
+
+#block-system-main-menu ul ul li a{
+	color:$color-1;
+
+	&:hover{
+		color:darken($color-1,10%) !important
+	}
+}
+
+#block-system-main-menu ul ul li a.active:hover{
+	@include bp(md){
+		cursor:pointer !important;
+		color:darken($color-1,10%) !important;
+	}
+}
+
+#block-system-main-menu ul li a.active{
+	@include bp(md){
+		background:$color-1 !important;
+		cursor:pointer !important;
+	}
+}
+
+#block-system-main-menu ul ul li a.active{
+	@include bp(md){
+		background:#fff !important;
+	}
+}
+
+
+// postscript
+#zone-postscript{
+	color:#485052 !important;
+	background:#ddd;
+	
+	h2,.block .content ul li a{
+		color:$color-1 !important;
+	}
+}
+
+
+// footer
+#zone-footer{
+	background:#ccc;
+	color:#485052;
+}
+
+#block-menu-menu-footer-menu{
+	ul li a{
+		color:$color-1
+	}
+}
+
+
+// idea wall
+$idea-wall-colors: rgb(33,95,172), rgb(75,192,175), rgb(209,93,121), rgb(239,180,30),rgb(180,139,181);
+
+
+@each $color in $idea-wall-colors {
+    $i: index($idea-wall-colors, $color);
+    .node-type-bold-ideas{
+    	.comment-wrapper{
+    		&:nth-child(5n+#{$i}){
+    			.comment-inner{
+    				background:$color !important;
+
+    				&::after{
+    					border-color:transparent $color transparent transparent;
+    				}
+    			}
+    			.rate-widget-thumbs_up_custom .thumb-up{
+    				background: darken($color,15%)
+    			}
+    		}
+    	}
+    }
+}
+
+.node-type-bold-ideas footer.comment-submitted{
+	color:rgba(black,.5);
+}
+
+
+
+
+
+
+
+
+
+

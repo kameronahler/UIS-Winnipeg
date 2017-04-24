@@ -1,0 +1,52 @@
+/* ================================
+
+Engaging Plans Styling Boilerplate
+
+==================================*/
+
+/* -----------------
+Mixins and Vars
+----------------- */
+@import "src/scss/partials/ep-mixins";
+@import "src/scss/partials/vars";
+
+
+
+
+/* -----------------
+Momentum scrolling not working on touch devices
+----------------- */
+@import "src/scss/partials/ep/momentum-scrolling/momentum-scrolling";
+
+
+
+/* -----------------
+BP3
+-----------------*/
+@import "src/scss/partials/ep/bp3/_01-base";
+@import "src/scss/partials/ep/bp3/_02-layout";
+@import "src/scss/partials/ep/bp3/_04-state";
+@import "src/scss/partials/ep/bp3/_05-theme";
+
+
+
+/* -----------------
+Accessibility Concerns
+-----------------*/
+// Font scaling
+@import "src/scss/partials/ep/fonts/global";
+@import "src/scss/partials/ep/fonts/participate";
+@import "src/scss/partials/ep/fonts/events";
+@import "src/scss/partials/ep/fonts/contact";
+@import "src/scss/partials/ep/fonts/open-question";
+
+
+
+
+/* -----------------
+Project Specific
+-----------------*/
+// Font scaling
+@import "src/scss/partials/existing";
+@import "src/scss/partials/landing";
+
