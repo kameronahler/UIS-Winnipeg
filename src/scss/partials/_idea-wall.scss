@@ -1,0 +1,27 @@
+.node-type-bold-ideas{
+	.title-background{
+		background: $color-1
+	}
+	.comment-inner p{
+		font-size:14px;
+	}
+	#comment-form #edit-actions input{
+		padding:10px 16px;
+		font-weight:400;
+		text-transform:uppercase;
+		background:$color-1;
+		transition: .2s ease;
+		font-size:1rem;
+
+		&:hover{
+			opacity:1 !important;
+			background-color:darken($color-1,5%)
+		}
+	}
+	.comment-form{
+		+ .comment-links{
+			color:$color-1;
+			font-size:1rem;
+		}
+	}
+}

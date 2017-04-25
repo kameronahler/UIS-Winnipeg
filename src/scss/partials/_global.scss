@@ -1,0 +1,25 @@
+body > .page{
+	font: 1rem/1.5 "Open Sans", $font-system;
+}
+
+#zone-footer{
+	background:$color-1;
+	color:#fff;
+	font-size:14px;
+
+	@include bp(md){
+		width:100%;
+		margin-bottom:0 !important;
+	}
+
+	.region-footer-second{
+		width:100%;
+	}
+}
+
+#block-menu-menu-footer-menu ul li a{
+	color:#fff;
+	margin-left:.5rem;
+	margin-right:.5rem;
+	text-transform:uppercase;
+}

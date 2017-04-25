@@ -1,0 +1,144 @@
+//breadcrumb
+.page-node-65{
+	.breadcrumb{
+		@include hide;
+	}
+}
+
+// page title
+.page-node-65{
+	h1.title{
+		display:none;
+	}
+}
+
+
+// intro
+.landing-intro-header{
+	&__h1{
+		color:$color-1;
+		text-align:center;
+
+		@include bp(md){
+			margin-bottom:32px;
+		}
+	}
+}
+
+.landing-intro-description{
+	margin-bottom:2rem;
+	@include bp(md){
+		margin:0 auto;
+		margin-bottom:4rem;
+		padding:2rem;
+		box-shadow:0 10px 15px -7px rgba(black,.3);
+		background-color:$color-1;
+		background:linear-gradient(-10deg, $color-1, lighten($color-1,5%));
+	} 
+
+	&__p{
+		text-align:center;
+		
+		@include bp(md){
+			text-align:left;
+			color:#fff;
+			text-shadow:1px 1px 3px rgba(black,.25)
+		}
+
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+}
+
+
+// nav
+.landing-nav-cta{
+	font-weight:bold;
+	text-align:center;
+	color:$color-1;
+	margin-bottom:2rem;
+}
+
+.landing-nav-wrapper{
+	&__ul{
+		list-style:none;
+		width:100%;
+		margin-left:0;
+		padding-left:0 !important;
+
+		@include bp(md){
+			display:flex;
+			flex-flow:row wrap;
+			justify-content:center
+		}
+	}
+	&__li{
+		margin-bottom:50px;
+
+		@include bp(md){
+			flex-basis:50%;
+		}
+		@include bp(lg){
+			flex-basis:25%;
+		}
+
+		&:hover{
+			img{
+				@include bp(md){
+					transform:translateY(-10pxi);
+				}
+			}
+		}
+
+		img{
+			display:block;
+			max-width:75%;
+			margin:0 auto 10px;
+
+			@include bp(xs){
+				max-width:50%;
+			}
+			@include bp(md){
+				transition:.25s ease .1s;
+			}
+		}
+	}
+	&__a{
+		text-decoration:none;
+		text-align:center;
+		font-weight:700;
+		display:block;
+		margin-bottom:1rem;
+		color:inherit
+	}
+	&__button{
+		display:block;
+		margin:0 auto;
+		text-align:center;
+		max-width:75%;
+		background:$color-1;
+		padding:10px 16px;
+		font-weight:400;
+		color:#fff;
+		text-decoration:none;
+		border-radius:4px;
+		text-transform:uppercase;
+		letter-spacing:1px;
+		
+		@include bp(md){
+			transition:transform .2s ease, background .2s ease;
+		}
+		
+		&:hover{
+			@include bp(md){
+				background:darken($color-1,10%);
+			}
+		}
+		&:active{
+			@include bp(md){
+				background:lighten($color-1,5%);
+			}
+		}
+	}
+}
