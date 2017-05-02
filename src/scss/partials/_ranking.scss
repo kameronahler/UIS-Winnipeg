@@ -1,0 +1,127 @@
+.page-node-70{
+	.tabledrag-toggle-weight-wrapper{
+		display:none;
+	}
+
+	#comments{
+		display:none;
+	}
+
+	.description{
+		text-align:center;
+	}
+	.webform-submit{
+		@extend .landing-nav-wrapper__button
+	}
+}
+/* ----------------------------------------
+Originally from Leandro - Envision Longmont
+-------------------------------------------*/
+// variable = id of each table you need to style 
+$table-id: #edit-submitted-please-rank-these-categories;
+
+// ranking table
+#{$table-id} {
+	border-collapse: collapse;
+	border:none;
+	
+	// tr's
+    .draggable{
+    	//reset for mobile display:block
+    	display:table-row;
+    	height: 75px;
+    	border:none;
+    	transition: all 0.15s ease-out;
+
+		// active class row
+        &.drag{
+        	transform: scaleX(1.025);
+        	td{
+        		opacity:.9;
+        	}
+		}
+
+		&:nth-child(1) td{background:lighten($color-1,5%);}
+		&:nth-child(2) td{background:lighten($color-1,2.5%);}
+		&:nth-child(3) td{background:$color-1}
+		&:nth-child(4) td{background:darken($color-1,2.5%);}
+		&:nth-child(5) td{background:darken($color-1,5%);}
+		&:nth-child(6) td{background:darken($color-1,7.5%);}
+    }
+
+    // td's 
+    td{
+    	//reset for mobile display:block
+    	display:table-cell;
+    	font-size:1rem;
+    	font-family:QuicksandBold, sans-serif;
+		color:#fff;
+		box-shadow:inset 0 -4px rgba(black,.125);
+        text-shadow:0 -1px 1px rgba(black,.25);
+    	width:100%;
+			
+    	&:first-child{
+    		border-radius: 10px 0 0 10px;
+    	}
+    	&:last-child{
+    		border-radius: 0 10px 10px 0;
+
+    		@include bp(md){
+    			padding-right:2rem;
+    		}
+    	}
+    }
+
+
+	// icon
+	.tabledrag-handle{
+		margin:0;
+		padding:0 1rem;
+		vertical-align:middle;
+
+		.handle{
+			display:none;
+
+			@include bp(lg){
+				display:block;
+				background:no-repeat 50% url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iQXJ0Ym9hcmQiIGZpbGw9IiNGRkZGRkYiPgogICAgICAgICAgICA8cGF0aCBkPSJNMTYuMDAwMDE5MSw4LjAwMDAwOTU0IEMxNi4wMDAwMTkxLDcuODQ4MjIzNjQgMTUuOTM3NTE5LDcuNzA1MzY2MzMgMTUuODMwMzc2LDcuNTk4MjIzMzQgTDEzLjU0NDY1OSw1LjMxMjUwNjMzIEMxMy40Mzc1MTYsNS4yMDUzNjMzNSAxMy4yOTQ2NTg3LDUuMTQyODYzMjcgMTMuMTQyODcyOCw1LjE0Mjg2MzI3IEMxMi44MzAzNzI0LDUuMTQyODYzMjcgMTIuNTcxNDQzNiw1LjQwMTc5MjE1IDEyLjU3MTQ0MzYsNS43MTQyOTI1MyBMMTIuNTcxNDQzNiw2Ljg1NzE1MTAzIEw5LjE0Mjg2ODA0LDYuODU3MTUxMDMgTDkuMTQyODY4MDQsMy40Mjg1NzU1MiBMMTAuMjg1NzI2NSwzLjQyODU3NTUyIEMxMC41OTgyMjY5LDMuNDI4NTc1NTIgMTAuODU3MTU1OCwzLjE2OTY0NjY0IDEwLjg1NzE1NTgsMi44NTcxNDYyNiBDMTAuODU3MTU1OCwyLjcwNTM2MDM3IDEwLjc5NDY1NTcsMi41NjI1MDMwNSAxMC42ODc1MTI3LDIuNDU1MzYwMDcgTDguNDAxNzk1NzMsMC4xNjk2NDMwNTkgQzguMjk0NjUyNzUsMC4wNjI1MDAwNzQ1IDguMTUxNzk1NDMsMCA4LjAwMDAwOTU0LDAgQzcuODQ4MjIzNjQsMCA3LjcwNTM2NjMzLDAuMDYyNTAwMDc0NSA3LjU5ODIyMzM0LDAuMTY5NjQzMDU5IEw1LjMxMjUwNjMzLDIuNDU1MzYwMDcgQzUuMjA1MzYzMzUsMi41NjI1MDMwNSA1LjE0Mjg2MzI3LDIuNzA1MzYwMzcgNS4xNDI4NjMyNywyLjg1NzE0NjI2IEM1LjE0Mjg2MzI3LDMuMTY5NjQ2NjQgNS40MDE3OTIxNSwzLjQyODU3NTUyIDUuNzE0MjkyNTMsMy40Mjg1NzU1MiBMNi44NTcxNTEwMywzLjQyODU3NTUyIEw2Ljg1NzE1MTAzLDYuODU3MTUxMDMgTDMuNDI4NTc1NTIsNi44NTcxNTEwMyBMMy40Mjg1NzU1Miw1LjcxNDI5MjUzIEMzLjQyODU3NTUyLDUuNDAxNzkyMTUgMy4xNjk2NDY2NCw1LjE0Mjg2MzI3IDIuODU3MTQ2MjYsNS4xNDI4NjMyNyBDMi43MDUzNjAzNyw1LjE0Mjg2MzI3IDIuNTYyNTAzMDUsNS4yMDUzNjMzNSAyLjQ1NTM2MDA3LDUuMzEyNTA2MzMgTDAuMTY5NjQzMDU5LDcuNTk4MjIzMzQgQzAuMDYyNTAwMDc0NSw3LjcwNTM2NjMzIDAsNy44NDgyMjM2NCAwLDguMDAwMDA5NTQgQzAsOC4xNTE3OTU0MyAwLjA2MjUwMDA3NDUsOC4yOTQ2NTI3NSAwLjE2OTY0MzA1OSw4LjQwMTc5NTczIEwyLjQ1NTM2MDA3LDEwLjY4NzUxMjcgQzIuNTYyNTAzMDUsMTAuNzk0NjU1NyAyLjcwNTM2MDM3LDEwLjg1NzE1NTggMi44NTcxNDYyNiwxMC44NTcxNTU4IEMzLjE2OTY0NjY0LDEwLjg1NzE1NTggMy40Mjg1NzU1MiwxMC41OTgyMjY5IDMuNDI4NTc1NTIsMTAuMjg1NzI2NSBMMy40Mjg1NzU1Miw5LjE0Mjg2ODA0IEw2Ljg1NzE1MTAzLDkuMTQyODY4MDQgTDYuODU3MTUxMDMsMTIuNTcxNDQzNiBMNS43MTQyOTI1MywxMi41NzE0NDM2IEM1LjQwMTc5MjE1LDEyLjU3MTQ0MzYgNS4xNDI4NjMyNywxMi44MzAzNzI0IDUuMTQyODYzMjcsMTMuMTQyODcyOCBDNS4xNDI4NjMyNywxMy4yOTQ2NTg3IDUuMjA1MzYzMzUsMTMuNDM3NTE2IDUuMzEyNTA2MzMsMTMuNTQ0NjU5IEw3LjU5ODIyMzM0LDE1LjgzMDM3NiBDNy43MDUzNjYzMywxNS45Mzc1MTkgNy44NDgyMjM2NCwxNi4wMDAwMTkxIDguMDAwMDA5NTQsMTYuMDAwMDE5MSBDOC4xNTE3OTU0MywxNi4wMDAwMTkxIDguMjk0NjUyNzUsMTUuOTM3NTE5IDguNDAxNzk1NzMsMTUuODMwMzc2IEwxMC42ODc1MTI3LDEzLjU0NDY1OSBDMTAuNzk0NjU1NywxMy40Mzc1MTYgMTAuODU3MTU1OCwxMy4yOTQ2NTg3IDEwLjg1NzE1NTgsMTMuMTQyODcyOCBDMTAuODU3MTU1OCwxMi44MzAzNzI0IDEwLjU5ODIyNjksMTIuNTcxNDQzNiAxMC4yODU3MjY1LDEyLjU3MTQ0MzYgTDkuMTQyODY4MDQsMTIuNTcxNDQzNiBMOS4xNDI4NjgwNCw5LjE0Mjg2ODA0IEwxMi41NzE0NDM2LDkuMTQyODY4MDQgTDEyLjU3MTQ0MzYsMTAuMjg1NzI2NSBDMTIuNTcxNDQzNiwxMC41OTgyMjY5IDEyLjgzMDM3MjQsMTAuODU3MTU1OCAxMy4xNDI4NzI4LDEwLjg1NzE1NTggQzEzLjI5NDY1ODcsMTAuODU3MTU1OCAxMy40Mzc1MTYsMTAuNzk0NjU1NyAxMy41NDQ2NTksMTAuNjg3NTEyNyBMMTUuODMwMzc2LDguNDAxNzk1NzMgQzE1LjkzNzUxOSw4LjI5NDY1Mjc1IDE2LjAwMDAxOTEsOC4xNTE3OTU0MyAxNi4wMDAwMTkxLDguMDAwMDA5NTQgWiIgaWQ9ImFycm93cy0tLUZvbnRBd2Vzb21lIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);	
+				background-size:cover;
+				margin:0;
+				padding:4px;
+				width:1rem;
+				height:1rem;
+			}
+		}
+	}
+}
+
+//tr
+tr.even,
+tr.odd {
+    padding: .1em 0;
+}
+
+// color mixin for td's
+@mixin drag($class, $color) {
+    #{$table-id} .#{$class} td {
+        background-color: $color;
+
+        &:before{
+        	@include bp(lg){
+
+        	}
+        }
+    }
+    #{$table-id} .#{$class} td:first-child {
+        // background-image: url("/files/#{$class}.svg");
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+    }
+}
+
+@include drag(connectivity,$color-1);
+@include drag(performance,$color-1);
+@include drag(citybuilding,$color-1);
+@include drag(costeffective,$color-1);
+@include drag(socialequity,$color-1);
+@include drag(environmentalimpact,$color-1);

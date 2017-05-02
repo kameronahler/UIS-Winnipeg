@@ -1,4 +1,7 @@
 .node-type-bold-ideas{
+	.breadcrumb{
+		visibility:hidden;
+	}
 	.title-background{
 		background: $color-1
 	}
@@ -22,6 +25,34 @@
 		+ .comment-links{
 			color:$color-1;
 			font-size:1rem;
+		}
+	}
+	ul{
+		margin:1rem auto 0;
+		max-width:600px;
+	}
+	.landing-intro-description{
+		max-width:600px;
+	}
+	.field-name-body{
+		p{
+			padding-left:0;
+		}
+	}
+	#comment-form{
+		width:100%;
+	}
+	.button--ideawall{
+		@extend .landing-nav-wrapper__button;
+		display:none;
+		width:auto;
+		font-family:inherit;
+
+		@include bp(md){
+			display:block;
+			position:absolute;
+			top:-55pxi;
+			left:0;
 		}
 	}
 }
