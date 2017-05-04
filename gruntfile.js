@@ -86,6 +86,7 @@ module.exports = function(grunt) {
                         require('cssnano')({
                             calc: false,
                             colorMin: false,
+                            discardComments: false,
                             convertValues: false,
                             discardUnused: false,
                             zindex: false,

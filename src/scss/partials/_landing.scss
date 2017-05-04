@@ -1,12 +1,15 @@
 //breadcrumb
-.page-node-65{
+.page-node-65,
+.page-node-76
+{
 	.breadcrumb{
 		@include hide;
 	}
 }
 
 // page title
-.page-node-65{
+.page-node-65,
+.page-node-76{
 	h1.title{
 		display:none;
 	}
@@ -83,13 +86,13 @@
 			flex-basis:33.33334%;
 			display:flex;
 			flex-direction:column;
-			flex-wrap:no-wrap;
+			flex-wrap:nowrap;
 		}
 
 		&:hover{
 			img{
 				@include bp(md){
-					transform:translateY(-10pxi);
+					transform:translateY(-10pxi) translateZ(0);
 				}
 			}
 		}
@@ -99,12 +102,15 @@
 			width:100%;
 			max-width:75%;
 			margin:0 auto 10px;
+			transform:translateZ(0);
 
 			@include bp(xs){
 				max-width:50%;
+				width:150px;
+				height:150px;
 			}
 			@include bp(md){
-				transition:.25s ease .1s;
+				transition:transform .25s ease .1s;
 			}
 		}
 	}
